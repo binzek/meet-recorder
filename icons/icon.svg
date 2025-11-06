@@ -1,0 +1,29 @@
+<!-- Minimal modern recording icon -->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g" cx="0.3" cy="0.3" r="1">
+      <stop offset="0" stop-color="#222"/>
+      <stop offset="0.6" stop-color="#111"/>
+      <stop offset="1" stop-color="#090909"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#g)" />
+  <!-- subtle inner stroke -->
+  <rect x="4" y="4" width="120" height="120" rx="26" stroke="#1a1a1a" stroke-width="2" fill="none" />
+  <!-- concentric ring -->
+  <circle cx="64" cy="64" r="32" stroke="url(#ring)" stroke-width="4" fill="none" />
+  <!-- breathing style dot base -->
+  <circle cx="64" cy="64" r="14" fill="#ff2d55" />
+  <circle cx="64" cy="64" r="22" stroke="#ff2d55" stroke-opacity="0.22" stroke-width="4" fill="none" />
+  <!-- micro ticks for a unique accent -->
+  <g stroke="#2a2a2a" stroke-linecap="round" stroke-width="3">
+    <line x1="64" y1="26" x2="64" y2="18" />
+    <line x1="26" y1="64" x2="18" y2="64" />
+    <line x1="64" y1="102" x2="64" y2="110" />
+    <line x1="102" y1="64" x2="110" y2="64" />
+  </g>
+</svg>

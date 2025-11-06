@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Meet Recorder</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Meet Recorder</h1>
+      </div>
+
+      <div class="record-panel">
+        <button id="recordToggle" class="record-btn" aria-pressed="false">
+          <span class="vis-dot"></span>
+          <span class="vis-label">REC</span>
+        </button>
+        <label class="mic-toggle">
+          <input type="checkbox" id="includeMic" checked /> Mic
+        </label>
+      </div>
+
+      <div class="info">
+        <p id="statusText" class="status-text">Ready</p>
+        <p id="duration">00:00:00</p>
+        <p id="message"></p>
+      </div>
+      <div class="footer">
+        <small>Open a Google Meet tab to start</small>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
