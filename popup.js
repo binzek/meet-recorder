@@ -95,28 +95,6 @@ recordToggle.addEventListener("click", async () => {
   }
 });
 
-// Stop recording button
-stopBtn.addEventListener("click", async () => {
-  try {
-    // Send message to background script to stop recording
-    chrome.runtime.sendMessage({ action: "stopRecording" }, (response) => {
-      if (chrome.runtime.lastError) {
-        showMessage("Error: " + chrome.runtime.lastError.message, "error");
-        return;
-      }
-
-      if (response && response.success) {
-        // UI will update via storage change listener
-        showMessage("Stopping recording...", "info");
-      } else {
-        showMessage(response?.error || "Failed to stop recording", "error");
-      }
-    });
-  } catch (error) {
-    showMessage("Error: " + error.message, "error");
-  }
-});
-
 // Update UI based on recording state
 function updateUI(recording) {
   const container = document.querySelector(".container");
